@@ -2,4 +2,10 @@
     <p>Buscar</p>
     <input type="text" pInputText [(ngModel)]="value" placeholder="Ingrese una palabra">
     <button class="btn"(click)="addSearch()">Enviar</button>
+    <div class="gif-grid row">
+        <div class="gif-card col-md-3" *ngFor="let gif of gifs">
+          <img [src]="gif.images.fixed_height.url" [alt]="gif.title" />
+          <p>{{ gif.title }}</p>
+        </div>
+      </div>
 </main>

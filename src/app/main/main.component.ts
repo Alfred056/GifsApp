@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { GiphyService } from '../giphy.service';
 
 @Component({
   selector: 'app-main',
@@ -8,12 +9,19 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class MainComponent {
   value: string = '';
   @Output() sendSearch = new EventEmitter<string>();
-
-  constructor() {}
+  gifs: any[] = [];
+  constructor(private giphyService: GiphyService) { }
 
   addSearch() {
+    //Agregar la busqueda al historial
     if (this.value.trim() !== '') {
       this.sendSearch.emit(this.value.trim());
+      
+      // Hacer la solicitud a la API antes de limpiar el valor
+      this.giphyService.searchGifs(this.value.trim()).subscribe(response => {
+        this.gifs = response.data;
+      });
+      
       this.value = '';
     }
   }
