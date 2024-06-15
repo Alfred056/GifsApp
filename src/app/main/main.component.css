@@ -1,0 +1,18 @@
+.main{
+    margin-left: 160px;
+    padding: 10px;
+}
+
+.btn{
+    background-color: rgb(46, 73, 173);
+    color: white; 
+    margin: 10px;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+
+.btn:hover {
+    background-color: #5e90c6; 
+  }

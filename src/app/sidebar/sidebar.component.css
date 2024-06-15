@@ -1,0 +1,13 @@
+
+
+.navigator{
+    background-color: rgb(1, 4, 20);
+    color: aliceblue;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top:0;
+    left:0;
+    padding-left: 10px;
+    padding-top: 5px;
+}
