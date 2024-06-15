@@ -17,7 +17,7 @@ export class MainComponent {
     if (this.value.trim() !== '') {
       this.sendSearch.emit(this.value.trim());
       
-      // Hacer la solicitud a la API antes de limpiar el valor
+      // Hacer la solicitud a la API
       this.giphyService.searchGifs(this.value.trim()).subscribe(response => {
         this.gifs = response.data;
       });
@@ -25,4 +25,5 @@ export class MainComponent {
       this.value = '';
     }
   }
+
 }

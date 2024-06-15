@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { HistorialComponent } from './historial/historial.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CardModule } from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ButtonModule,
+    CardModule,
     HttpClientModule,
   ],
   providers: [

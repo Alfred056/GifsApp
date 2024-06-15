@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Search } from './search.model';
 
 @Component({
@@ -8,11 +8,10 @@ import { Search } from './search.model';
 })
 export class HistorialComponent {
   searchs: Search[] = [];
-
-  constructor() {}
-
+  @Output() valueSelected = new EventEmitter<string>();
   receiveSearch(search: string) {
     const newSearch = new Search(search);
     this.searchs.push(newSearch);
   }
+
 }
