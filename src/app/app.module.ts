@@ -6,12 +6,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { HistorialComponent } from './historial/historial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    MainComponent
+    MainComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,4 @@
-<app-sidebar></app-sidebar>
-<app-main></app-main>
+<div>
+    <app-main (sendSearch)="sidebar.receiveSearch($event)"></app-main>
+    <app-sidebar #sidebar></app-sidebar>
+  </div>

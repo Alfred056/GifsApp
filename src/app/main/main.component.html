@@ -1,5 +1,5 @@
 <main class="main">
     <p>Buscar</p>
-    <input type="text" pInputText [(ngModel)]="value" placeholder="Buscar gifs..."/>
-    <button class="btn">Buscar</button>
+    <input type="text" pInputText [(ngModel)]="value" placeholder="Ingrese una palabra">
+    <button class="btn"(click)="addSearch()">Enviar</button>
 </main>
